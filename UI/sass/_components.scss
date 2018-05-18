@@ -19,4 +19,14 @@
     opacity: 0;
     visibility: hidden;
   }
+
+  &--wrong {
+    background-color: $color-red-light;
+    color: white;
+  }
+
+  &--right {
+    background-color: $color-green-light-1;
+    color: white;
+  }
 } 

@@ -6,12 +6,19 @@
   "scripts": {
     "watch:sass": "node-sass sass/main.scss style/style.css -w",
     "devserver": "live-server --port=6969 --browser=firefox",
-    "start": "npm-run-all --parallel devserver watch:sass"
+    "start": "npm-run-all --parallel devserver watch:sass",
+
+    "compile:sass": "node-sass sass/main.scss style/style.comp.css",
+    "prefix:css": "postcss --use autoprefixer -o style/style.prefix.css style/style.comp.css",
+    "compress:css": "node-sass style/style.prefix.css style/style.min.css --output-style compressed",
+    "build:css": "npm-run-all compile:sass prefix:css compress:css"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "autoprefixer": "^8.5.0",
     "node-sass": "^4.9.0",
-    "npm-run-all": "^4.1.3"
+    "npm-run-all": "^4.1.3",
+    "postcss-cli": "^5.0.0"
   }
 }
