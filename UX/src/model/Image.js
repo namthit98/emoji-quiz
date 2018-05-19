@@ -1,7 +1,7 @@
 export default class Image {
   constructor() {
     this.begin = 1;
-    this.end = 10;
+    this.end = 20;
     this.images = [];
     this.currentImage;
   };
@@ -13,9 +13,7 @@ export default class Image {
   }
 
   mixImages() {
-    this.images = this.images.sort(function() {
-      return Math.random() - 0.5;
-    });
+    this.images = this.shuffle(this.images);
   }
 
   getImages() {
@@ -24,5 +22,20 @@ export default class Image {
 
   getCurrentImage() {
     return this.currentImage;
+  }
+
+  shuffle(array) {
+    var length = array.length,
+        temp,
+        i;
+    
+    while (length) {
+       i = Math.floor(Math.random() * length--);
+
+       temp = array[length];
+       array[length] = array[i];
+       array[i] = temp;
+    }
+    return array;
   }
 }
