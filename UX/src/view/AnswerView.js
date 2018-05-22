@@ -71,3 +71,11 @@ export const clearNotifi = () => {
 export const clearAllChar = () => {
   document.querySelectorAll(textClass.textboxAnswer).forEach(el => el.textContent = '');
 }
+
+export const showOriginAnswer = (ans) => {
+  const arr = Array.from(ans);
+  
+  document.querySelectorAll(textClass.textboxAnswer).forEach((el, index) => {
+    el.textContent = arr[index];
+  })
+}

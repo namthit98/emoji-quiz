@@ -131,12 +131,13 @@ const checkAns = () => {
   const ans = answerView.getAns();
 
   //Check ans
-  if(ans === state.answer.getAnswer()) {
+  if(ans === state.char.getRemovedAnswer()) {
     //Show result to view
     answerView.showSuccess();
+    answerView.showOriginAnswer(state.answer.getAnswer());
     setTimeout(() => {
       changeNextLevel();
-    }, 1000);
+    }, 2000);
   } else {
     //Show result to view
     answerView.showError();

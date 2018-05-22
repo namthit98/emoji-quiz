@@ -12,8 +12,8 @@ export default class Char {
     this.answer = this.answer.toUpperCase();
     
     //Remove Vietnamese mark
-    this.answer = this.removeVietnamese(this.answer);
     this.mixedAnswer = this.answer;
+    this.mixedAnswer = this.removeVietnamese(this.mixedAnswer);
 
     //Add more character
     const string = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -24,11 +24,15 @@ export default class Char {
 
     //Mix answer
     this.mixedAnswer = Array.from(this.mixedAnswer).sort(() => Math.random() - 0.5).join('');
-
   };
 
   getAnswer() {
     return this.answer;
+  }
+
+  //Remove answer that removed vietnamese
+  getRemovedAnswer() {
+    return this.removeVietnamese(this.answer);
   }
 
   getMixAnswer() {
