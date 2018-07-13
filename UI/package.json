@@ -7,7 +7,6 @@
     "watch:sass": "node-sass sass/main.scss style/style.css -w",
     "devserver": "live-server --port=6969 --browser=firefox",
     "start": "npm-run-all --parallel devserver watch:sass",
-
     "compile:sass": "node-sass sass/main.scss style/style.comp.css",
     "prefix:css": "postcss --use autoprefixer -o style/style.prefix.css style/style.comp.css",
     "compress:css": "node-sass style/style.prefix.css style/style.min.css --output-style compressed",
