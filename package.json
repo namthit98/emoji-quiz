@@ -2,7 +2,7 @@
   "name": "emoji-quiz",
   "version": "1.0.0",
   "description": "Emoji Quiz Game ( Vietnamese )",
-  "homepage": "https://namthit98.github.io/emoji-quiz",
+  "homepage": "https://namthit98.github.io/emoji-quiz/",
   "main": "index.js",
   "dependencies": {
     "gh-pages": "^1.2.0"
