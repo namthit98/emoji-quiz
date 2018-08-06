@@ -1,0 +1,24 @@
+{
+  "name": "emoji-quiz",
+  "version": "1.0.0",
+  "description": "Emoji Quiz Game ( Vietnamese )",
+  "homepage": "https://namthit98.github.io/emoji-quiz",
+  "main": "index.js",
+  "dependencies": {
+    "gh-pages": "^1.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "deploy": "gh-pages -d final"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/namthit98/emoji-quiz.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/namthit98/emoji-quiz/issues"
+  }
+}
